@@ -5,8 +5,8 @@ from reviews import views
 
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
-router.register(r'users', views.UserViewSet)
-router.register(r'groups', views.GroupViewSet)
+# router.register(r'users', views.UserViewSet)
+# router.register(r'groups', views.GroupViewSet)
 router.register(r'reviews', views.ReviewViewSet)
 
 # Wire up our API using automatic URL routing.
