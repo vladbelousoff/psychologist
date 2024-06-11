@@ -25,9 +25,18 @@ SECRET_KEY = 'django-insecure-_cihl3jp3ieub0))vbk=7rjr^n)_bgou#d)v4+-6ik$^^!u*ql
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['vladbelousov.pythonanywhere.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = [
+    'vladbelousov.pythonanywhere.com',
+    'pavlyuts.pythonanywhere.com',
+    '127.0.0.1',
+    'localhost'
+]
 
-CSRF_TRUSTED_ORIGINS = ['https://vladbelousov.pythonanywhere.com', 'http://localhost:5173']
+CSRF_TRUSTED_ORIGINS = [
+    'https://vladbelousov.pythonanywhere.com',
+    'https://pavlyuts.pythonanywhere.com',
+    'http://localhost:5173'
+]
 
 
 # Application definition
@@ -58,6 +67,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     'https://vladbelousov.pythonanywhere.com',
+    'https://pavlyuts.pythonanywhere.com',
     'http://localhost:5173',
 ]
 
