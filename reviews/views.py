@@ -1,4 +1,3 @@
-from django.contrib.auth.models import Group, User
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import permissions, viewsets
 
