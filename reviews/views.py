@@ -1,6 +1,8 @@
 from django.contrib.auth.models import Group, User
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import permissions, viewsets
 
+from .filters import QuestionFilter
 from .serializers import *
 
 
@@ -31,4 +33,12 @@ class ReviewViewSet(viewsets.ModelViewSet):
 class QuestionViewSet(viewsets.ModelViewSet):
     queryset = Question.objects.all()
     serializer_class = QuestionSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    filter_backends = [DjangoFilterBackend]
+    filterset_class = QuestionFilter
+
+
+class LanguageViewSet(viewsets.ModelViewSet):
+    queryset = Language.objects.all()
+    serializer_class = LanguageSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]

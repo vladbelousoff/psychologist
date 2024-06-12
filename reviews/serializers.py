@@ -1,7 +1,8 @@
 from django.contrib.auth.models import Group, User
 from rest_framework import serializers
+from rest_framework.fields import ReadOnlyField
 
-from reviews.models import Review, Question
+from reviews.models import Review, Question, Language
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -22,7 +23,15 @@ class ReviewSerializer(serializers.HyperlinkedModelSerializer):
         fields = '__all__'
 
 
+class LanguageSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Language
+        fields = '__all__'
+
+
 class QuestionSerializer(serializers.HyperlinkedModelSerializer):
+    language = ReadOnlyField(source='language.name')
+
     class Meta:
         model = Question
-        fields = '__all__'
+        fields = ['id', 'question_text', 'answer_text', 'language']
