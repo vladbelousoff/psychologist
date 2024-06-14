@@ -26,14 +26,16 @@ SECRET_KEY = 'django-insecure-_cihl3jp3ieub0))vbk=7rjr^n)_bgou#d)v4+-6ik$^^!u*ql
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'vladbelousov.pythonanywhere.com',
+    'yana-pavlyuts.on.fleek.co',
+    'pavlyuts.pro',
     'pavlyuts.pythonanywhere.com',
     '127.0.0.1',
     'localhost'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://vladbelousov.pythonanywhere.com',
+    'https://yana-pavlyuts.on.fleek.co/',
+    'https://pavlyuts.pro/',
     'https://pavlyuts.pythonanywhere.com',
     'http://localhost:5173'
 ]
@@ -67,8 +69,9 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'https://vladbelousov.pythonanywhere.com',
+    'https://yana-pavlyuts.on.fleek.co/',
     'https://pavlyuts.pythonanywhere.com',
+    'https://pavlyuts.pro/',
     'http://localhost:5173',
 ]
 
