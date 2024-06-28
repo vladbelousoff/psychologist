@@ -36,6 +36,7 @@ ALLOWED_HOSTS = [
 CSRF_TRUSTED_ORIGINS = [
     'https://yana-pavlyuts.on.fleek.co/',
     'https://pavlyuts.pro/',
+    'http://pavlyuts.pro/',
     'https://pavlyuts.pythonanywhere.com',
     'http://localhost:5173'
 ]
@@ -72,6 +73,7 @@ CORS_ALLOWED_ORIGINS = [
     'https://yana-pavlyuts.on.fleek.co/',
     'https://pavlyuts.pythonanywhere.com',
     'https://pavlyuts.pro/',
+    'http://pavlyuts.pro/',
     'http://localhost:5173',
 ]
 
